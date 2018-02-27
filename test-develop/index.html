@@ -1,0 +1,65 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script type="text/javascript" src="js/gq.js"></script>
+    <script type="text/javascript" src="js/pc.js"></script>
+    <script type="text/javascript" src="js/c.js"></script>
+
+    <!-- Delete cookie -->
+    <button type="button" onclick="deleteCookie(parseCookie(document.cookie));">delete cookie</button>
+    <button type="button" onclick="console.log(parseCookie(document.cookie));">log cookie</button>
+
+    <!-- IMAGE -->
+    <!--
+    <img src="img/1.png" id="s1" style="visibility:hidden">
+    <img src="img/2.png" id="s2" style="visibility:hidden">
+    <img src="img/3.png" id="s3" style="visibility:hidden">
+    -->
+
+    <!-- javascript -->
+    <script>
+        // Image
+        for (img in IMG_ARRAY) {
+            document.write("<img src='" + IMG_DIR + img + "' id='" + IMG_ARRAY[img] + "' style='visibility:hidden'>");
+            //document.write("<img src='" + IMG_DIR + img + "' id='" + IMG_ARRAY[img] + "'>");
+        }
+
+        // get URL Query
+        var val = getUrlVars();
+
+        // URL Query 2 cookie
+        var age = " ;max-age=" + encodeURIComponent(60 * 60 * 24 * 30); // １ヶ月くらい
+        var cnt = 0;
+        if (QUERY_KEY in val) {
+            for (i in STAMP_KEY_ARRAY) {
+                if (val[QUERY_KEY] == STAMP_KEY_ARRAY[i]) {
+                    document.cookie = STAMP_KEY_ARRAY[i] + "=" + encodeURIComponent("A") + age;
+                    cnt++;
+                }
+            }
+            if (cnt == 0) {
+                // Queryがあるが，どれにもヒットしない
+            }
+        } else {
+            // Queryがない
+        }
+
+        // get cookie Array & show stamps
+        var cookies = parseCookie(document.cookie);
+        for (key in cookies) {
+            e = document.getElementById(STAMP_KEY2IMG_ID[key]);
+            e.style.visibility = "visible";
+        }
+    </script>
+
+</body>
+
+</html>
