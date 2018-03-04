@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <table border="1" align="center" style="border-collapse: collapse;">
+        <script>
+            STAMP_ID = [
+                "hamamura",
+                "iwata",
+                "shikida",
+                "shinomori",
+                "shimizu",
+                "nakahara",
+                "fukumoto",
+                "yokoyama",
+                "ren",
+                "ugawa",
+                "kadota",
+                "kurihara",
+                "shigemasu",
+                "takada",
+                "matsuzaki",
+                "mendori",
+                "yoshida",
+                "ueda"
+            ];
+
+
+            for (i in STAMP_ID) {
+                if (i % 4 == 0) document.write("<tr>");
+
+                document.write("<td align='center'>");
+
+                s = STAMP_ID[i];
+                document.write(s);
+                document.write("<br>");
+
+                document.write("<img src='qr/" + s + ".png'>");
+
+                document.write("</td>");
+
+                if (i % 4 == 3) document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+
+</html>
