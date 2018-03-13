@@ -46,7 +46,7 @@ function STAMP_ID2HP(stampID) {
         "matsuzaki": "http://ipl.info.kochi-tech.ac.jp/matsuzaki-lab/home.html",
         "mendori": "http://www.lab.kochi-tech.ac.jp/menken/",
         "yoshida": "http://www.lab.kochi-tech.ac.jp/yoshilab/index.html",
-        "ueda": "http://www.scinfo.kochi-tech.ac.jp/k-ueda/"
+        "ueda": "http://www.scinfo.kochi-tech.ac.jp/k-ueda/"
     }[stampID];
 }
 

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 style="text-align:center">KUT QR Stamp Rally</h1>
+    <div style="text-align:right">KUT Information</div>
+    <br>
+    <div style="text-align:center">
+        <button type="button" onclick="deleteCookie(parseCookie(document.cookie));">delete cookie</button>
+    </div>
+    <br>
+
+    <table border="1" align="center">
+        <tr>
+            <td>
+                <a id="hamamura" href="map.html?place=hamamura">
+                    <img src="img/question.png" id="hamamura_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="iwata" href="map.html?place=iwata">
+                    <img src="img/question.png" id="iwata_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="shikida" href="map.html?place=shikida">
+                    <img src="img/question.png" id="shikida_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="shinomori" href="map.html?place=shinomori">
+                    <img src="img/question.png" id="shinomori_stamp">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a id="shimizu" href="map.html?place=shimizu">
+                    <img src="img/question.png" id="shimizu_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="nakahara" href="map.html?place=nakahara">
+                    <img src="img/question.png" id="nakahara_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="fukumoto" href="map.html?place=fukumoto">
+                    <img src="img/question.png" id="fukumoto_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="yokoyama" href="map.html?place=yokoyama">
+                    <img src="img/question.png" id="yokoyama_stamp">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a id="ren" href="map.html?place=ren">
+                    <img src="img/question.png" id="ren_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="ugawa" href="map.html?place=ugawa">
+                    <img src="img/question.png" id="ugawa_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="kadota" href="map.html?place=kadota">
+                    <img src="img/question.png" id="kadota_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="kurihara" href="map.html?place=kurihara">
+                    <img src="img/question.png" id="kurihara_stamp">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a id="shigemasu" href="map.html?place=shigemasu">
+                    <img src="img/question.png" id="shigemasu_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="takada" href="map.html?place=takada">
+                    <img src="img/question.png" id="takada_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="matsuzaki" href="map.html?place=matsuzaki">
+                    <img src="img/question.png" id="matsuzaki_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="mendori" href="map.html?place=hamamura">
+                    <img src="img/question.png" id="mendori_stamp">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a id="yoshida" href="map.html?place=yoshida">
+                    <img src="img/question.png" id="yoshida_stamp">
+                </a>
+            </td>
+            <td>
+                <a id="ueda" href="map.html?place=ueda">
+                    <img src="img/question.png" id="ueda_stamp">
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="js/gq.js"></script>
+    <script type="text/javascript" src="js/pc.js"></script>
+    <script type="text/javascript" src="js/c.js"></script>
+
+    <script>
+        document.write("SW", window.parent.screen.width);
+        document.write("SH", window.parent.screen.height);
+        document.write("WW", window.innerWidth);
+        document.write("HW", window.innerHeight);
+
+        console.log("SW", window.parent.screen.width);
+        console.log("SH", window.parent.screen.height);
+        console.log("WW", window.innerWidth);
+        console.log("HW", window.innerHeight);
+    </script>
+
+    <script>
+        // Query -> cookie
+        var val = getUrlVars();
+        if ("stamp" in val) {
+            var age = " ;max-age=" + encodeURIComponent(60 * 60 * 24 * 30); // About 1 Month
+            switch (val["stamp"]) {
+                case "hamamura":
+                    document.cookie = "hamamura=Y" + age;
+                    break;
+                case "iwata":
+                    document.cookie = "iwata=Y" + age;
+                    break;
+                case "shikida":
+                    document.cookie = "shikida=Y" + age;
+                    break;
+                case "shinomori":
+                    document.cookie = "shinomori=Y" + age;
+                    break;
+                case "shimizu":
+                    document.cookie = "shimizu=Y" + age;
+                    break;
+                case "nakahara":
+                    document.cookie = "nakahara=Y" + age;
+                    break;
+                case "fukumoto":
+                    document.cookie = "fukumoto=Y" + age;
+                    break;
+                case "yokoyama":
+                    document.cookie = "yokoyama=Y" + age;
+                    break;
+                case "ren":
+                    document.cookie = "ren=Y" + age;
+                    break;
+                case "ugawa":
+                    document.cookie = "ugawa=Y" + age;
+                    break;
+                case "kadota":
+                    document.cookie = "kadota=Y" + age;
+                    break;
+                case "kurihara":
+                    document.cookie = "kurihara=Y" + age;
+                    break;
+                case "shigemasu":
+                    document.cookie = "shigemasu=Y" + age;
+                    break;
+                case "takada":
+                    document.cookie = "takada=Y" + age;
+                    break;
+                case "matsuzaki":
+                    document.cookie = "matsuzaki=Y" + age;
+                    break;
+                case "mendori":
+                    document.cookie = "mendori=Y" + age;
+                    break;
+                case "yoshida":
+                    document.cookie = "yoshida=Y" + age;
+                    break;
+                case "ueda":
+                    document.cookie = "ueda=Y" + age;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // cookie -> stamp
+        var cookies = parseCookie(document.cookie);
+        for (i in STAMP_ID) {
+            s = STAMP_ID[i]
+            if (s in cookies) {
+                var a = document.getElementById(STAMP_ID2A_ID(s));
+                var img = document.getElementById(STAMP_ID2IMG_ID(s));
+
+                a.setAttribute("href", STAMP_ID2HP(s));
+                img.setAttribute("src", STAMP_ID2IMG_FILE(s));
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
