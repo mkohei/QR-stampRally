@@ -28,19 +28,19 @@
 
     <!-- stamp table -->
     <table border="1" align="center">
-        <tr>
-            <script>
-                for (var i = 0; i < STAMP_ID.length; i++) {
-                    document.write("<td>");
-                    document.write("<a id='" + STAMP_ID[i] + "' href='map.html?place=" + STAMP_ID2A_ID(STAMP_ID[i]) + "'>");
-                    document.write("<img src='img/question.png' id='" + STAMP_ID2IMG_ID(STAMP_ID[i]) + "'>");
+        <script>
+            for (var y = 0; y < STAMP_ID.length / 4; y++) {
+                document.write("<tr>");
+                for (var x = 0; x < 4 && y * 4 + x < STAMP_ID.length; x++) {
+                    document.write("<td align='center' valign='center'>");
+                    document.write("<a id='" + STAMP_ID[y * 4 + x] + "' href='map.html?place=" + STAMP_ID2A_ID(STAMP_ID[y * 4 + x]) + "'>");
+                    document.write("<img src='img/question.png' id='" + STAMP_ID2IMG_ID(STAMP_ID[y * 4 + x]) + "'>");
                     document.write("</a>");
                     document.write("</td>");
-
-                    if (i % 4 == 3) document.write("<tr></tr>");
                 }
-            </script>
-        </tr>
+                document.write("</tr>");
+            }
+        </script>
     </table>
 
     <!-- stamp -->
